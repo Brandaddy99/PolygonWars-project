@@ -1,0 +1,96 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+#gameCanvas{
+    background-color: #222;
+    z-index: 20;
+}
+
+
+
+
+#startScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(gemini_generated_Image.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backgroun-color: blueviolet;
+    color: crimson;
+    z-index: 20;
+}
+
+
+#gameOverScreen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(GameOver.jpeg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: black;
+    font-size: xx-large;
+    z-index: 20;
+}
+
+
+#scoreDisplay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: red;
+    z-index: 100;
+
+
+}
+
+#winScreen{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.8);
+    color: azure;
+    z-index: 100;
+}
+h2{
+    position: relative;
+}
+#stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: goldenrod;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: twinkle 1s infinite alternate;
+}
+@keyframes twinkle{
+    from { opacity: 0.5;}
+    to { opacity: 1;}
+}
